@@ -14,6 +14,19 @@ git add 放入stage区
 git commit -m "注释内容，方便寻找版本"  提交到Repository
 git status  查看状态
 git diff [file1] 查看与Repository有何不同
-asdf
 ```
+
+> git status 查看状态
+
+#### git init
+
+![image-20201105201733015](../img/image-20201105201733015.png)
+
+#### git add
+
+![image-20201105201759185](../img/image-20201105201759185.png)
+
+#### git commit -m "注释"
+
+![image-20201105201903425](../img/image-20201105201903425.png)
 
