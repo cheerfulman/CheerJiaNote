@@ -131,3 +131,47 @@ $ git branch
 ### 分支管理
 
 我们使用`Fast forward`时，删除分支后，会丢掉分支信息，我们可以通过`--no-ff`方式的`git merge`合并；
+
+![image-20201106195647991](../img/image-20201106195647991.png)
+
+可以看到不适应ff模式合并后为：
+
+![git-no-ff-mode](https://www.liaoxuefeng.com/files/attachments/919023225142304/0)
+
+而使用的后合并为：
+
+![git-br-ff-merge](https://www.liaoxuefeng.com/files/attachments/919022412005504/0)
+
+> 为什么上面说--no-ff要添加-m呢？
+
+因为从上两张图图可以看：**这里的--no--ff 模式其实就是相当于master指针new了一个跟dev指针一样的空间并且放了相同的内容然后指向这个空间。而原来的快速模式，就是简单将master指针指向dev指针指向的内容而已，并没有自己创造空间。**
+
+#### 小结
+
++ `--no-ff`可以禁用`fast forward`模式
+
++ 并且命令为`git merge --no-ff -m "" dev`增加一个-m
+
+### 多人协作
+
+当你从远程仓库克隆时，实际上Git自动把本地的`master`分支和远程的`master`分支对应起来了，并且，远程仓库的默认名称是`origin`。
+
+要查看远程库的信息，用`git remote`：
+
+![image-20201106201134235](../img/image-20201106201134235.png)
+
+或者，用`git remote -v`显示更详细的信息：
+
+![image-20201106201146919](../img/image-20201106201146919.png)
+
+> 推送master分支
+
+```
+git push origin master
+```
+
+> 推送dev分支
+
+```txt
+git push origin dev --- origin 为远程库默认名
+```
