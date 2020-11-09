@@ -304,3 +304,68 @@ CarsCars
 #### 小结：
 
 + 常量是全局的，默认是全局变量
+
+### 字符串
+
+#### PHP 并置运算符
+
+在 PHP 中，只有一个字符串运算符。
+
+并置运算符 (.) 用于把两个字符串值连接起来 === 其它语言的 + 。
+
+：
+
+```php
+<?php
+// 不区分大小写的常量名
+define("car","Cars");
+$t = "my car is";
+echo $t . " " . car;
+echo car;
+?>
+输出：
+my car is CarsCars
+```
+
+#### String API
+
++ strlen(): 返回字符串长度
++ strpos(): 函数用于在字符串内查找一个字符或一段指定的文本。
+
+示例:
+
+```php
+<?php
+// 不区分大小写的常量名
+define("car","Cars");
+
+echo strpos(car,"C");
+?>
+输出:0
+```
+
+更多String API参考手册：https://www.php.cn/php/php-ref-string.html
+
+#### 其它API
+
++ intdiv(x1,x2) ： x1整除x2；
+
+  示例代码：
+
+  ```php
+  <?php
+  
+  function toBinaryNum($x){
+      if(intdiv($x,2) > 0)
+          toBinaryNum(intdiv($x,2));
+      echo $x % 2;
+  }
+  
+  toBinaryNum(578);
+  ?>
+  输出：
+  1001000010
+  ```
+
+  
+
