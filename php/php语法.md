@@ -367,5 +367,369 @@ echo strpos(car,"C");
   1001000010
   ```
 
+### 其它
+
+  php的**if-else**语句与其它语句相同，示例：
+
+  ```php
+  <?php
   
+  $t = 100;
+  
+  if ($t < 10) {
+      echo "Have a good morning!";
+  } elseif ($t < 20) {
+      echo "Have a good day!";
+  } else {
+      echo "Have a good night!";
+  }
+  
+  ?>
+  ```
+
+  **switch-case**语句：
+
+  ```php
+  <?php
+  $t = 1;
+  
+  switch ($t){
+      case 1:echo "Have a good morning!";break;
+      case 2:echo "Have a good day!";break;
+      default: echo "Have a good night!";
+  }
+  
+  ?>
+  ```
+
+  while、for与其它语言无差别，我们看看foreach：
+
+```php
+<?php
+
+$colors = array("red","green","blue","yellow");
+
+foreach ($colors as $color) {
+    echo "$color <br>";
+}
+?>
+输出：
+red
+green
+blue
+yellow
+```
+
+php中函数的用法：
+
+```php
+<?php
+function writeMsg() {
+  echo "Hello world!";
+}
+
+writeMsg(); // 调用函数
+?>
+
+// 含参数
+<?php
+function familyName($fname,$year) {
+  echo "$fname Zhang. Born in $year <br>";
+}
+
+familyName("Li","1975");
+familyName("Hong","1978");
+familyName("Tao","1983");
+?>
+
+// 默认参数
+<?php
+function setHeight($minheight=50) {
+  echo "The height is : $minheight <br>";
+}
+
+setHeight(350);
+setHeight(); // 将使用默认值 50
+setHeight(135);
+setHeight(80);
+?>
+
+// 返回值
+<?php
+function sum($x,$y) {
+  $z=$x+$y;
+  return $z;
+}
+
+echo "5 + 10 = " . sum(5,10) . "<br>";
+echo "7 + 13 = " . sum(7,13) . "<br>";
+echo "2 + 4 = " . sum(2,4);
+?>
+```
+
+在php中有三种数组类型：
+
++ 索引数组 - 普通数组
++ 关联数组 - map
++ 多维数组 - 二维数组
+
+```php
+<?php
+
+// 索引数组
+$cars=array("Volvo","BMW","SAAB");
+
+echo count($cars) . "<br>";
+
+for($i = 0; $i < count($cars); $i ++){
+    echo $cars[$i] . "<br>";
+}
+
+// 关联数组
+$age = array("a"=>30,"b"=>2,'c'=>12);
+
+echo  " a is ". $age['a'] . " years old<br>";
+
+
+foreach ($age as $a => $value){
+    echo "key = " . $a . " value = " . $value . "<br>";
+}
+?>
+```
+
+> 多维数组
+
+```php
+$sites = array
+(
+    "runoob"=>array
+    (
+        "菜鸟教程",
+        "http://www.runoob.com"
+    ),
+    "google"=>array
+    (
+        "Google 搜索",
+        "http://www.google.com"
+    ),
+    "taobao"=>array
+    (
+        "淘宝",
+        "http://www.taobao.com"
+    )
+);
+
+print_r($sites)
+```
+
+> 一些数组API
+
+```php
+sort() - 以升序对数组排序
+rsort() - 以降序对数组排序
+asort() - 根据值，以升序对关联数组进行排序
+ksort() - 根据键，以升序对关联数组进行排序
+arsort() - 根据值，以降序对关联数组进行排序
+krsort() - 根据键，以降序对关联数组进行排序
+```
+
+```php
+<?php
+
+$age=array("Bill"=>"35","Steve"=>"37","Peter"=>"43");
+asort($age);
+foreach($age as $x=>$x_value) {
+    echo "Key=" . $x . ", Value=" . $x_value;
+    echo "<br>";
+}
+
+?>
+
+<?php
+$age=array("Bill"=>"35","Steve"=>"37","Peter"=>"43");
+ksort($age);
+foreach($age as $x=>$x_value) {
+    echo "Key=" . $x . ", Value=" . $x_value;
+    echo "<br>";
+}
+
+?>
+```
+
+对象相关；
+
+如继承 ---> extends；
+
+构造方法 ---> __construct() or 类名()
+
+访问控制：public、protected、private
+
+接口 ---> interface
+
+实现 ---> implements
+
+调用父类 ---> parent::  
+
+抽象类 ---> abstract
+
+静态 --> static
+
+不可变 ---> final
+
+### 超级全局变量
+
+#### $GLOBALS
+
+用法前面讲过：
+
+```php
+$x = 70;
+function t(){
+    $GLOBALS['x'] = 2;
+}
+```
+
+#### $_SERVER
+
+$_SERVER是一个包含头信息(header)、路径(path)、以及脚本位置(script locations)等等信息的数组。这个数组中的项目由 Web 服务器创建。不能保证每个服务器都提供全部项目；
+
+```php
+<?php 
+echo $_SERVER['PHP_SELF'];
+echo "<br>";
+echo $_SERVER['SERVER_NAME'];
+echo "<br>";
+echo $_SERVER['HTTP_HOST'];
+echo "<br>";
+echo $_SERVER['HTTP_REFERER'];
+echo "<br>";
+echo $_SERVER['HTTP_USER_AGENT'];
+echo "<br>";
+echo $_SERVER['SCRIPT_NAME'];
+?>
+```
+
+#### $_REQUEST
+
+$_REQUEST 用于收集HTML表单提交的数据。
+
+```php
+<html>
+<body>
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+    Name: <input type="text" name="fname">
+    <input type="submit">
+</form>
+
+<?php
+$name = $_REQUEST['fname'];
+echo $name;
+
+?>
+
+</body>
+</html>
+```
+
+####  $_POST
+
+PHP $_POST 被广泛应用于收集表单数据,在HTML form标签的指定该属性："method="post"。
+
+```php
+<html>
+<body>
+
+<form method="post" action="<?php echo $_SERVER['PHP_SELF']?>">
+    Name: <input type="text" name="fname">
+    <input type="submit">
+</form>
+
+<?php
+$name = $_POST['fname'];
+echo $name;
+
+?>
+
+</body>
+</html>
+```
+
+#### $_GET
+
+PHP $_GET 同样被广泛应用于收集表单数据，在HTML form标签的指定该属性："method="get",也可以收集URL中发送的数据。
+
+> 比如我们url中添加参数a=100&b=1000则可以用$_GET取出
+
+```php
+<html>
+<body>
+<a href="phpinfo.php?a=100&b=10000">Test $GET</a>
+</body>
+</html>
+    
+phpinfo.php
+<?php echo "a ".$_GET['a'] . " b " .$_GET['b'];?>
+```
+
+### 魔术常量
+
++ `__LINE__`: 返回当前行号
+
+  ```php
+  <?php
+  echo '这是第 “ '  . __LINE__ . ' ” 行';
+  ?>
+  ```
+
++ `__FILE__` ：文件完整路径和文件名
+
+  ```php
+  echo "该文件位于" . __FILE__ ;
+  ```
+
++ `__DIR__` :文件所在的目录
+
+  ```php
+  echo "该文件位于" . __DIR__ ."目录<br>";
+  ```
+
++ `__function__`: 返回函数被定义时的名字
+
+  ```php
+  function name(){
+      echo  "该函数名字为" . __FUNCTION__ ."<br>";
+  }
+  name();
+  ```
+
++ `__CLASS__`:返回该类被定义时的名字
+
+  ```php
+  class test {
+      function _print() {
+          echo '类名为：'  . __CLASS__ . "<br>";
+          echo  '函数名为：' . __FUNCTION__ ;
+      }
+  }
+  $t = new test();
+  $t->_print();
+  ```
+
++ `——TRAIT`:是php实现代码复用的方法称为`trait`
+
++ `__METHOD__` : 方法被定义时的名字;
+
++ `__NAMESPACE__`：命名空间的名称；
+
+### 命名空间
+
+命名空间：解决重名问题，约定一个前缀；
+
++ 解决命名重读
++ 提高代码可读性（通过namespace创建一个简短的名称）
+
+### 魔术方法
+
++ `__construct()` 实例化对象时被调用，当__construct和以类名为函数名的函数同时存在时，__construct将被调用，另一个不被调用。
 
