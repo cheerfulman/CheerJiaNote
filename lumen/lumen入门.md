@@ -21,7 +21,7 @@ composer create-project --prefer-dist laravel/laravel laravel 5.5.*
 
 此时我D盘中多了个`laravel`文件；
 
-然后使用下面命令即可监听8999端口号，此时你去浏览器访问localhost:8099如下图则成功
+然后使用下面命令即可监听8999端口号，此时你去浏览器访问localhost:8999如下图则成功
 
 ```cmd
 php -S localhost:8999 -t public
