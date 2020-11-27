@@ -100,3 +100,6 @@ epoll对应三个函数：
 2. 可以避免内核态到用户态的切换，但是有歧义，有人说是共享内存，有的则说没有
 
 歧义参考：https://www.zhihu.com/question/39792257
+
+
+- [x] weasdfwr
