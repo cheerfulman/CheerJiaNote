@@ -89,6 +89,8 @@ class ArticleService
 
     // 展示文章列表
     public static function articleShowList($size,$page,$status,$uid){
+        // 增加代码鲁棒性
+        self::CheckSizePageStatus($size,$page,$status);
         $query = Article::query();
         if(isset($status)){
             $query->where(['status'=>intval($status)]);
@@ -99,8 +101,7 @@ class ArticleService
         if($page > $total / size){
             throw new ArticleException('超出页面限制',ErrorCode::ARTICLE_PAGE_ERROR);
         }
-        // 增加代码鲁棒性
-        self::CheckSizePageStatus($size,$page,$status);
+
         // 返回的list 数据
         $articleList = [];
 
