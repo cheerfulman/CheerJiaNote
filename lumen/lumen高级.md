@@ -135,7 +135,7 @@ composer global require laravel/installer
 + 新建students表的迁移文件
   + `php artisan make:migration create_students_table`,--table和--create参数用来指定数据表名称，以及迁移文件是否要建立新的数据表。
 + 生成模型的同时生产迁移文件
-  + `php artison make:model Student -m`
+  + `php artisan make:model Student -m`
 
 创建迁移文件：
 
