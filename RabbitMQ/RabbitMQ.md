@@ -325,3 +325,18 @@ public class Customer2 {
 }
 ```
 
+### 第五种模型（Topic）
+
+![image-20201204101808380](../img/image-20201204101808380.png)
+
+可以做一个通配符匹配：
+
+- \* (star) can substitute for exactly one word.
+- \# (hash) can substitute for zero or more words.
+
+ 与上述差不多：
+
+```java
+channel.queueBind(queue,"topic","user.#");
+```
+

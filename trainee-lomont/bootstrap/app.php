@@ -14,7 +14,7 @@
 $app = new Illuminate\Foundation\Application(
     realpath(__DIR__.'/../')
 );
-
+$app->useStoragePath(env('APP_STORAGE', '/tmp'));
 /*
 |--------------------------------------------------------------------------
 | Bind Important Interfaces
@@ -40,6 +40,8 @@ $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
     App\Exceptions\Handler::class
 );
+
+
 
 /*
 |--------------------------------------------------------------------------
