@@ -8,7 +8,7 @@ Redis是分布式系统中的重要组件，主要是解决高并发、大数据
 
 ## 常用的数据结构指令
 
-![](https://upload-images.jianshu.io/upload_images/11474088-2bff85f7b51a7207.png?imageMogr2/auto-orient/strip|imageView2/2/w/538/format/webp)
+![image-20201217195127304](../img/image-20201217195127304.png)
 
 ## 场景分析
 
