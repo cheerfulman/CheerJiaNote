@@ -2,11 +2,11 @@
 
 机器上的`nginx`配置文件是很多的，我们如何找到我们想要查看的`nginx`并且找到错误日志的目录呢？
 
->  根据你要查看的域名如：`testmsg.oa.com`
+>  根据你要查看的域名如：`www.baidu.com`
 
-那么我们`nginx`下很可能`server_name` 会是`testmsg.oa.com`
+那么我们`nginx`下很可能`server_name` 会是`www.baidu.com`
 
-我们可以使用正则匹配 **grep** : `grep  testmsg.oa.com /etc/nginx/conf.d/*.conf`
+我们可以使用正则匹配 **grep** : `grep  www.baidu.com /etc/nginx/conf.d/*.conf`
 
 本机的`conf`文件一般放置在`/etc/nginx/conf.d`上；
 
