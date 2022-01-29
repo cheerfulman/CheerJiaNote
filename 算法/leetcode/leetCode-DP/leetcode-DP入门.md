@@ -334,3 +334,117 @@ func min(a, b int) int {
 }
 ```
 
+### Sixth day
+
+#### [152 乘积最大子数组](https://leetcode-cn.com/problems/maximum-product-subarray/)
+
+题意：连续子数组乘积最大的值；
+
+> 以前面的思想得出f[i] 为以i结尾的最大乘积。但是我们需要考虑负数情况，如果为负数，我们应该用nums[i] * 以i结尾最小乘积，故维护两个dp，一个是最大乘积，一个是最小乘积
+
+```go
+func maxProduct(nums []int) int {
+    length := len(nums)
+    mi, mx := nums[0], nums[0]
+    res := nums[0]
+    for i := 1; i < length; i ++ {
+        temp_mx := mx
+        mx = max(nums[i], max(mx * nums[i], mi * nums[i]))
+        mi = min(nums[i], min(mi * nums[i], temp_mx * nums[i]))
+        res = max(mx, res)
+    }
+    return res
+}
+func max(a, b int) int {
+    if a > b {
+        return a
+    }
+    return b
+}
+func min(a, b int) int {
+    if a > b {
+        return b
+    }
+    return a
+}
+```
+
+```go
+func maxProduct(nums []int) int {
+    length := len(nums)
+    mi, mx := nums[0], nums[0]
+    res := nums[0]
+    for i := 1; i < length; i ++ {
+        if nums[i] < 0 {
+            mi, mx = mx, mi
+        }
+        mx = max(nums[i], mx * nums[i])
+        mi = min(nums[i], mi * nums[i])
+        res = max(mx, res)
+    }
+    return res
+}
+func max(a, b int) int {
+    if a > b {
+        return a
+    }
+    return b
+}
+func min(a, b int) int {
+    if a > b {
+        return b
+    }
+    return a
+}
+```
+
+#### [1567 乘积为正数的最长子数组](https://leetcode-cn.com/problems/maximum-length-of-subarray-with-positive-product/)
+
+题意：数组乘积为整数的最长子数组
+
+```go
+func getMaxLen(nums []int) int {
+    length := len(nums)
+    positive, negative := make([]int ,length), make([]int ,length)
+    if nums[0] > 0 {
+        positive[0], negative[0] = 1, 0
+    } else if nums[0] < 0 {
+        positive[0], negative[0] = 0, 1
+    }
+    res := 0
+    res = max(positive[0], res)
+    for i := 1; i < length; i ++ {
+        if nums[i] > 0 {
+            positive[i] = positive[i - 1] + 1
+            if negative[i - 1] > 0 {
+                negative[i] = negative[i - 1] + 1
+            } else {
+                negative[i] = 0
+            }
+        } else if nums[i] < 0 {
+            negative[i] = positive[i - 1] + 1
+            if negative[i - 1] > 0 {
+                positive[i] = negative[i -1] + 1
+            } else {
+                positive[i] = 0
+            }
+        } else {
+            positive[i], negative[i] = 0, 0
+        }
+        res = max(res, positive[i])
+    }
+    return res
+}
+
+func max(a, b int) int {
+    if a > b {
+        return a
+    }
+    return b
+}
+```
+
+### Day 16
+
+[5 最长回文串](https://leetcode-cn.com/problems/longest-palindromic-substring/)
+
