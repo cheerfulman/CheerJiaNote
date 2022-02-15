@@ -85,7 +85,7 @@
   * [Markissue](服务器运行/markissue.md)
   
 - 框架
-  - [Netty](框架/netty/netty.md)
+  - Netty
     - [Netty](框架/netty/netty.md)
     - [BIO NIO](框架/netty/BIO,NIO.md)
   - [Rabbit MQ](框架/RabbitMQ/RabbitMQ.md)
