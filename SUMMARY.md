@@ -89,10 +89,10 @@
     - [Netty](框架/netty/netty.md)
     - [BIO NIO](框架/netty/BIO,NIO.md)
   - [Rabbit MQ](框架/RabbitMQ/RabbitMQ.md)
-    - [RabbitMQ简要](框架/RabbitMQ/RabbitMQ.md)
+    - [RabbitMQ](框架/RabbitMQ/RabbitMQ.md)
     - [RabbitMQ安装](框架/RabbitMQ/RabbitMQ安装.md)
   - [Redis](框架/Redis/redis.md)
-    - [Redis入门](框架/Redis/redis.md)
+    - [Redis](框架/Redis/redis.md)
     - [redis总结](框架/Redis/redis总结.md)
   - Rocket MQ
     * [rocketMQ安装问题](框架/rocketMQ/rocketMQ安装问题.md)
