@@ -4,7 +4,6 @@
   * [Git修改](Git/Git修改.md)
   * [Git分支](Git/Git分支.md)
   * [Git简要](Git/Git简要.md)
-  
 - Mysql
   - javaWeb和jdbc
     * [1 Xml](mysql/javaWeb和jdbc/1-xml.md)
@@ -22,7 +21,6 @@
   * [mysql锁](mysql/mysql锁.md)
   * [Sql](mysql/sql.md)
   * [数据库原理](mysql/数据库原理.md)
-  
 - 其他语言或框架
   - Go
     * [GoLang基础语法](其他语言或框架/go/GoLang基础语法.md)
@@ -46,7 +44,6 @@
     * [魔术方法](其他语言或框架/php/魔术方法.md)
   - Vue
     * [vue插值语法](其他语言或框架/vue/vue插值语法.md)
-  
 - 基础
   - HTTP TCP
     * [HTTP](基础/HTTP_TCP/HTTP.md)
@@ -78,22 +75,13 @@
       * [进程同步与互斥](基础/操作系统/王道操作系统/进程同步与互斥.md)
       * [进程和线程调度](基础/操作系统/王道操作系统/进程和线程调度.md)
     * [操作系统小记](基础/操作系统/操作系统小记.md)
-  
-- 服务器运行
-  * [Github](服务器运行/Github.md)
-  * [JAVA MVEN MYSQL SHELL脚本](服务器运行/JAVA%20MVEN MYSQL SHELL脚本.md)
-  * [Markissue](服务器运行/markissue.md)
-  
 - 框架
-  - Netty
-    - [Netty](框架/netty/netty.md)
-    - [BIO NIO](框架/netty/BIO,NIO.md)
+  - [Netty](框架/netty/netty.md)
+    * [BIO NIO](框架/netty/BIO,NIO.md)
   - [Rabbit MQ](框架/RabbitMQ/RabbitMQ.md)
-    - [RabbitMQ](框架/RabbitMQ/RabbitMQ.md)
-    - [RabbitMQ安装](框架/RabbitMQ/RabbitMQ安装.md)
+    * [RabbitMQ安装](框架/RabbitMQ/RabbitMQ安装.md)
   - [Redis](框架/Redis/redis.md)
-    - [Redis](框架/Redis/redis.md)
-    - [redis总结](框架/Redis/redis总结.md)
+    * [redis总结](框架/Redis/redis总结.md)
   - Rocket MQ
     * [rocketMQ安装问题](框架/rocketMQ/rocketMQ安装问题.md)
   - Ssm
@@ -103,7 +91,6 @@
     * [ssm整合](框架/ssm/ssm整合.md)
   * [Spingboot](框架/spingboot.md)
   * [回顾spring框架](框架/回顾spring框架.md)
-  
 - 算法
   - acwing-蓝桥杯
     * [Acwing Digui](算法/acwing-蓝桥杯/Acwing-digui.md)
@@ -142,10 +129,8 @@
     * [并查集](算法/基础算法/并查集.md)
     * [红黑树](算法/基础算法/红黑树.md)
     * [背包](算法/基础算法/背包.md)
-  
 - 精简设计模式
   * [观察者模式](精简设计模式/观察者模式.md)
-  
 - 计算机网络
   * [Select Poll Epoll](计算机网络/select-poll-epoll.md)
   * [Tcp Ip](计算机网络/tcp-ip.md)
@@ -154,8 +139,12 @@
   * [数据链路层](计算机网络/数据链路层.md)
   * [网络层](计算机网络/网络层.md)
   * [计算机网络体系](计算机网络/计算机网络体系.md)
-  
 - 议题
   * [Markissue](议题/markissue.md)
   * [redis分享](议题/redis分享.md)
   * [Serverless](议题/serverless.md)
+- 运维相关
+  * [docker入门学习](运维相关/docker入门学习.md)
+  * [Markissue](运维相关/markissue.md)
+- 闲杂
+  * [Github](闲杂/Github.md)
