@@ -48,7 +48,6 @@
   - HTTP TCP
     * [HTTP](基础/HTTP_TCP/HTTP.md)
   - JavaSE基础
-    - [设计模式](基础/JavaSE基础/设计模式/设计模式.md)
     * [cache机制](基础/JavaSE基础/cache机制.md)
     * [Class](基础/JavaSE基础/Class.md)
     * [Java IO](基础/JavaSE基础/JavaIO.md)
@@ -130,7 +129,10 @@
     * [红黑树](算法/基础算法/红黑树.md)
     * [背包](算法/基础算法/背包.md)
 - 精简设计模式
+  - 极客时间设计模式之美
+    * [设计模式理论](精简设计模式/极客时间设计模式之美/设计模式理论.md)
   * [观察者模式](精简设计模式/观察者模式.md)
+  * [设计模式](精简设计模式/设计模式.md)
 - 计算机网络
   * [Select Poll Epoll](计算机网络/select-poll-epoll.md)
   * [Tcp Ip](计算机网络/tcp-ip.md)
