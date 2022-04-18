@@ -51,6 +51,7 @@
     * [HTTP](base/HTTP_TCP/HTTP.md)
   - Minimal Design Patterns
     - 极客时间设计模式之美
+      * [Pratical 1](base/minimal_design_patterns/极客时间设计模式之美/pratical_1.md)
       * [设计模式理论](base/minimal_design_patterns/极客时间设计模式之美/设计模式理论.md)
     * [观察者模式](base/minimal_design_patterns/观察者模式.md)
     * [设计模式](base/minimal_design_patterns/设计模式.md)
